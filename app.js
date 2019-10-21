@@ -9,7 +9,7 @@ var usersRouter = require("./routes/users");
 var getClassesRouter = require("./routes/getClasses");
 
 var app = express();
-
+app.listen(process.env.PORT || 5000);
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
