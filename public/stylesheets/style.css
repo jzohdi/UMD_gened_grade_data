@@ -1,8 +1,42 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#counts-for,
+#grade,
+#credits {
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+}
+#counts-for:hover,
+#grade:hover,
+#credits:hover {
+  background-color: #bf0000;
+  color: white;
 }
 
-a {
-  color: #00B7FF;
+#courses-table {
+  overflow: scroll;
+}
+
+.header-content {
+  background-image: url("../images/study1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ae0000;
+  font-weight: bolder;
+}
+
+.api-main {
+  background-image: url("../images/computer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.api-body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+.main-card {
+  color: black;
+  background-color: white;
+  padding: 5vw;
+  margin-top: 5vh;
+  height: min-content;
 }

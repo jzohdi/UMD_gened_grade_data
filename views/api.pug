@@ -1,0 +1,43 @@
+extends layout
+
+block content
+    main(class="api-main container-fluid")
+        div(class='api-body row')
+            div(class="col-10 offset-1 main-card")
+                h4 API
+                p(style="margin-left: 20px;") The api for course list with grades is public with cross-cors allowed.
+                p(style="font-weight: bold") ENDPOINT:
+                p(style="margin-left: 20px;") https://umd-courses.herokuapp.com/api/classes/{semester}/{year}/GEN/{department}
+                p(style="font-weight: bold") RETURNS:
+                pre
+                    code(style="margin-left: 20px;") { 
+                                                    |"Status": "Failed"/"Success", 
+                                                    |   "ClassList": [CourseObjects] }
+                    br
+                    br
+                    code(style="margin-left: 20px;") CourseObject : 
+                                                    |{
+                                                    | "Id": "Course Id"(String), 
+                                                    | "Name": (String), 
+                                                    | "Credits": (String), 
+                                                    | "GenEds": ["Departments"](Array(String)),
+                                                    | "Department": (String),
+                                                    | "Year": (String),
+                                                    | "Semester": (String)
+                                                    | "Grades": {
+                                                    |     "Average": (Integer) (May be missing),
+                                                    |     "Description": (String)
+                                                    |  }
+                                                    |}              
+
+            div(class="col-10 offset-1 main-card")
+                h4 Semester
+                p(style="margin-left: 20px;") options: fall, winter, spring, summer.
+                p(style="margin-left: 20px;") important: must be lower case. semester too far in advance will probably result in empty list
+                h4 Year
+                p(style="margin-left: 20px;") options: 4 digit integer.
+                p(style="margin-left: 20px;") important: years
+                h4 Department
+                p(style="margin-left: 20px;") options: any Gen Ed department
+                a(style="margin-left: 20px;" href='https://app.testudo.umd.edu/soc/gen-ed') https://app.testudo.umd.edu/soc/gen-ed
+                p(style="margin-left: 20px;") important: must be upper case                               

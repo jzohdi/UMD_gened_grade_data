@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 
 mongoose.connect(
   `mongodb+srv://${process.env.MONOG_ATLAS_USER}:${process.env.MONGO_ATLAS_PW}@cluster0-advdq.mongodb.net/test?retryWrites=true&w=majority`,
-  { useNewUrlParser: true }
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 let db = mongoose.connection;
 
