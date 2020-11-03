@@ -7,10 +7,10 @@ Data from: https://app.testudo.umd.edu/soc/ and https://planetterp.com/
 If the selected semester, year, and department have been selected before, the courses will be loaded from the database. Otherwise, the data is retrieved and then stored in the database for later use.
 
 ## Tools
-Express.js
-PUG
-MongoDB
-Cheerio
+- Express.js
+- PUG
+- MongoDB
+- Cheerio
 
 ## Previw
 
