@@ -4,7 +4,13 @@ This tool provides an interface for selecting course listings at University of M
 
 Data from: https://app.testudo.umd.edu/soc/ and https://planetterp.com/
 
-If the selected semester, year, and department will be loaded from the database (MongoDB) unless this combination has not been requested before. In this case, the data is retrieved and then stored in the database for later use.
+If the selected semester, year, and department have been selected before, the courses will be loaded from the database. Otherwise, the data is retrieved and then stored in the database for later use.
+
+## Tools
+Express.js
+PUG
+MongoDB
+Cheerio
 
 ## Previw
 
